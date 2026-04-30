@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./loginBox.css";
 
 type LoginData = {
   username: string;
@@ -38,14 +39,16 @@ function LoginPage() {
     alert(user ? "Login successful!" : "Invalid username or password.");
   };
   return (
-    <div>
+    <>
       <h1>Login Page</h1>
-      <label htmlFor="username">User Name</label>
-      <input type="text" id="username" onChange={handleChange} />
-      <label htmlFor="password">Password</label>
-      <input type="password" id="password" onChange={handleChange} />
-      <button onClick={login}>Login</button>
-    </div>
+      <div className="login-box">
+        <label htmlFor="username">User Name</label>
+        <input type="text" id="username" onChange={handleChange} />
+        <label htmlFor="password">Password</label>
+        <input type="password" id="password" onChange={handleChange} />
+        <button onClick={login}>Login</button>
+      </div>
+    </>
   );
 }
 
