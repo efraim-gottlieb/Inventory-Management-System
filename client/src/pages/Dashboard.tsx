@@ -8,16 +8,14 @@ function Dashboard() {
       </nav>
       <aside>
         <h2>Welcome to the Dashboard!</h2>
-        <p>test</p>
-        <p>test</p>
+        <p>efraim</p>
+        <p>sari</p>
         <p>test</p>
         <p>test</p>
       </aside>
       <main>
         <h3>Dashboard Content</h3>
-        <p>
-          main
-        </p>
+        <p>main</p>
       </main>
     </>
   );
