@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./loginBox.css";
+import { useNavigate } from "react-router";
 
 type LoginData = {
   username: string;
@@ -19,6 +20,7 @@ const users: Users = [
 ];
 
 function LoginPage() {
+  const navigate = useNavigate();
   const [loginData, setLoginData] = useState<LoginData>({
     username: "",
     password: "",
@@ -36,7 +38,12 @@ function LoginPage() {
         user.username === loginData.username &&
         user.password === loginData.password,
     );
-    alert(user ? "Login successful!" : "Invalid username or password.");
+    if (user) {
+      alert("Login successful!");
+      navigate("/dashboard");
+    } else {
+      alert("Invalid username or password.");
+    }
   };
   return (
     <>
